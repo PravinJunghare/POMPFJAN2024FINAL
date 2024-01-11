@@ -12,7 +12,6 @@ public class DriverFactory {
 	public WebDriver driver;
 	public ChromeOptions options;
 
-	
 	public WebDriver initDriver(String browserName) {
 		System.out.println("browser name is:" + browserName);
 
@@ -33,12 +32,11 @@ public class DriverFactory {
 		}
 
 		WebDriverManager.chromedriver().setup();
-      
-	
+
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
-		
+
 		return driver;
 	}
 
