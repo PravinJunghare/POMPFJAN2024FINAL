@@ -57,7 +57,7 @@ public class LoginPage {
 		 * driver.findElement(password).sendKeys(pwd);
 		 * driver.findElement(loginBtn).click();
 		 */
-
+        System.out.println("User credentilas are :" +un +":"+ pwd);
 		eleUtil.waitForElementVisible(emailId, AppConstant.DEFAULT_MEDIUM_TIMEOUT).sendKeys(un);
 		eleUtil.doSendKeys(password, pwd);
 		eleUtil.doClick(loginBtn);

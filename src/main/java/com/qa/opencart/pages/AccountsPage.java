@@ -32,35 +32,38 @@ public class AccountsPage {
 
 	public String getAccPageTitle() {
 		// String title = driver.getTitle();
-		//String title = eleUtil.waitForTitleIsAndFetch(10, "My Account");
-		String title = eleUtil.waitForTitleIsAndFetch(AppConstant.DEFAULT_MEDIUM_TIMEOUT, AppConstant.ACCOUNTS_PAGE_TITLE_VALUE);
+		// String title = eleUtil.waitForTitleIsAndFetch(10, "My Account");
+		String title = eleUtil.waitForTitleIsAndFetch(AppConstant.DEFAULT_MEDIUM_TIMEOUT,
+				AppConstant.ACCOUNTS_PAGE_TITLE_VALUE);
 		System.out.println("Accountpage title:" + title);
 		return title;
 	}
 
 	public String getAccPageUrl() {
 		// String url=driver.getCurrentUrl();
-	//	String url = eleUtil.waitForURLContainsAndFetch(10, "route=account/account");
-		String url = eleUtil.waitForURLContainsAndFetch(AppConstant.DEFAULT_MEDIUM_TIMEOUT, AppConstant.ACCOUNTS_PAGE_URL_FRACTION_VALUE);
+		// String url = eleUtil.waitForURLContainsAndFetch(10, "route=account/account");
+		String url = eleUtil.waitForURLContainsAndFetch(AppConstant.DEFAULT_MEDIUM_TIMEOUT,
+				AppConstant.ACCOUNTS_PAGE_URL_FRACTION_VALUE);
 		System.out.println("Loginpage url:" + url);
 		return url;
 	}
 
 	public boolean isLogoutLinkExist() {
 		// return driver.findElement(logoutLink).isDisplayed();
-		//return eleUtil.waitForElementVisible(logoutLink, 10).isDisplayed();
+		// return eleUtil.waitForElementVisible(logoutLink, 10).isDisplayed();
 		return eleUtil.waitForElementVisible(logoutLink, AppConstant.DEFAULT_MEDIUM_TIMEOUT).isDisplayed();
 	}
 
 	public boolean isSearchExist() {
 		// return driver.findElement(search).isDisplayed();
-		//return eleUtil.waitForElementVisible(search, 10).isDisplayed();
+		// return eleUtil.waitForElementVisible(search, 10).isDisplayed();
 		return eleUtil.waitForElementVisible(search, AppConstant.DEFAULT_MEDIUM_TIMEOUT).isDisplayed();
 	}
 
 	public List<String> getAccountPageHeadersList() {
-		//List<WebElement> accHeaderslist = eleUtil.waitForElementsVisible(accHeader, 10);
-		List<WebElement> accHeaderslist = eleUtil.waitForElementsVisible(accHeader,AppConstant.DEFAULT_MEDIUM_TIMEOUT);
+		// List<WebElement> accHeaderslist = eleUtil.waitForElementsVisible(accHeader,
+		// 10);
+		List<WebElement> accHeaderslist = eleUtil.waitForElementsVisible(accHeader, AppConstant.DEFAULT_MEDIUM_TIMEOUT);
 		List<String> accHeaderValList = new ArrayList<String>();
 
 		for (WebElement e : accHeaderslist) {
