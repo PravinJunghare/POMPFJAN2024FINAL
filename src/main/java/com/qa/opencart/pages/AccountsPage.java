@@ -27,6 +27,7 @@ public class AccountsPage {
 	private By logoutLink = By.linkText("Logout");
 	private By accHeader = By.xpath("//div[@id='content']//h2");
 	private By search = By.name("search");
+	private By searchIcon = By.cssSelector("#search button");
 
 	// 4 Page Actions
 
@@ -71,6 +72,18 @@ public class AccountsPage {
 			accHeaderValList.add(text);
 		}
 		return accHeaderValList;
+	}
+
+	public SearchPage performSearch(String searchKey) {
+		if (isSearchExist()) {
+			eleUtil.doSendKeys(search, searchKey);
+			eleUtil.doClick(searchIcon);
+			return new SearchPage(driver);
+		} else {
+			System.out.println("Search field is not exist");
+			return null;
+		}
+
 	}
 
 }
