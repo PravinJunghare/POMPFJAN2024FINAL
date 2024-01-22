@@ -1,180 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-18T08:50:09 IST" name="Default suite" finished-at="2024-01-18T08:51:10 IST" duration-ms="61664">
+  <suite started-at="2024-01-19T17:08:38 IST" name="Default suite" finished-at="2024-01-19T17:09:44 IST" duration-ms="66268">
     <groups>
     </groups>
-    <test started-at="2024-01-18T08:50:09 IST" name="Default test" finished-at="2024-01-18T08:51:10 IST" duration-ms="61664">
-      <class name="com.qa.opencart.tests.ProductInfoPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@45099dd3]" started-at="2024-01-18T08:50:09 IST" name="setUp" finished-at="2024-01-18T08:50:20 IST" duration-ms="11506" status="PASS">
+    <test started-at="2024-01-19T17:08:38 IST" name="Default test" finished-at="2024-01-19T17:09:44 IST" duration-ms="66268">
+      <class name="com.qa.opencart.tests.RegistrationPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.opencart.tests.RegistrationPageTest@3e27aa33]" started-at="2024-01-19T17:08:38 IST" name="setUp" finished-at="2024-01-19T17:08:48 IST" duration-ms="10004" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="producInfoPageSetup()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@45099dd3]" started-at="2024-01-18T08:50:20 IST" name="producInfoPageSetup" finished-at="2024-01-18T08:50:24 IST" duration-ms="3929" status="PASS">
+        <test-method is-config="true" signature="regPagesetUp()[pri:0, instance:com.qa.opencart.tests.RegistrationPageTest@3e27aa33]" started-at="2024-01-19T17:08:48 IST" name="regPagesetUp" finished-at="2024-01-19T17:08:51 IST" duration-ms="2889" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- producInfoPageSetup -->
-        <test-method signature="addToCarSingleProdcuttTest()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@45099dd3]" started-at="2024-01-18T08:50:24 IST" name="addToCarSingleProdcuttTest" finished-at="2024-01-18T08:50:32 IST" duration-ms="8291" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addToCarSingleProdcuttTest -->
-        <test-method signature="addToCartMultipleProductTest(java.lang.String,java.lang.String,int)[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@45099dd3]" started-at="2024-01-18T08:50:32 IST" name="addToCartMultipleProductTest" data-provider="getAddToCartTestData" finished-at="2024-01-18T08:50:38 IST" duration-ms="5945" status="PASS">
+        </test-method> <!-- regPagesetUp -->
+        <test-method signature="userRegTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.opencart.tests.RegistrationPageTest@3e27aa33]" started-at="2024-01-19T17:08:52 IST" name="userRegTest" data-provider="getRegTestData" finished-at="2024-01-19T17:09:05 IST" duration-ms="13141" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[MacBook]]>
+                <![CDATA[rahul]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[MacBook Pro]]>
+                <![CDATA[dravid]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[9988776655]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[test123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[yes]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addToCartMultipleProductTest -->
-        <test-method signature="addToCartMultipleProductTest(java.lang.String,java.lang.String,int)[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@45099dd3]" started-at="2024-01-18T08:50:38 IST" name="addToCartMultipleProductTest" data-provider="getAddToCartTestData" finished-at="2024-01-18T08:50:45 IST" duration-ms="6724" status="PASS">
+        </test-method> <!-- userRegTest -->
+        <test-method signature="userRegTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.opencart.tests.RegistrationPageTest@3e27aa33]" started-at="2024-01-19T17:09:05 IST" name="userRegTest" data-provider="getRegTestData" finished-at="2024-01-19T17:09:20 IST" duration-ms="14623" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[MacBook]]>
+                <![CDATA[saurav ]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[MacBook Air]]>
+                <![CDATA[ganguly]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[2]]>
+                <![CDATA[9922117733]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[saurav123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[no]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addToCartMultipleProductTest -->
-        <test-method signature="addToCartMultipleProductTest(java.lang.String,java.lang.String,int)[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@45099dd3]" started-at="2024-01-18T08:50:45 IST" name="addToCartMultipleProductTest" data-provider="getAddToCartTestData" finished-at="2024-01-18T08:50:52 IST" duration-ms="6906" status="PASS">
+        </test-method> <!-- userRegTest -->
+        <test-method signature="userRegTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.opencart.tests.RegistrationPageTest@3e27aa33]" started-at="2024-01-19T17:09:20 IST" name="userRegTest" data-provider="getRegTestData" finished-at="2024-01-19T17:09:32 IST" duration-ms="12446" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[iMac]]>
+                <![CDATA[john]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[iMac]]>
+                <![CDATA[abraham]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[3]]>
+                <![CDATA[9012345689]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[john142]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[yes]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addToCartMultipleProductTest -->
-        <test-method signature="productImagecountTest(java.lang.String,java.lang.String,int)[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@45099dd3]" started-at="2024-01-18T08:50:52 IST" name="productImagecountTest" data-provider="getProductImagesTestData" finished-at="2024-01-18T08:50:56 IST" duration-ms="3501" status="PASS">
+        </test-method> <!-- userRegTest -->
+        <test-method signature="userRegTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.opencart.tests.RegistrationPageTest@3e27aa33]" started-at="2024-01-19T17:09:32 IST" name="userRegTest" data-provider="getRegTestData" finished-at="2024-01-19T17:09:44 IST" duration-ms="11659" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[MacBook]]>
+                <![CDATA[john ]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[MacBook Pro]]>
+                <![CDATA[son]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[4]]>
+                <![CDATA[9988776611]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[dddddd]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[no]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- productImagecountTest -->
-        <test-method signature="productImagecountTest(java.lang.String,java.lang.String,int)[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@45099dd3]" started-at="2024-01-18T08:50:56 IST" name="productImagecountTest" data-provider="getProductImagesTestData" finished-at="2024-01-18T08:50:59 IST" duration-ms="3288" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[MacBook]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[MacBook Air]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[4]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- productImagecountTest -->
-        <test-method signature="productImagecountTest(java.lang.String,java.lang.String,int)[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@45099dd3]" started-at="2024-01-18T08:50:59 IST" name="productImagecountTest" data-provider="getProductImagesTestData" finished-at="2024-01-18T08:51:02 IST" duration-ms="3124" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[iMac]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[iMac]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[3]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- productImagecountTest -->
-        <test-method signature="productImagecountTest(java.lang.String,java.lang.String,int)[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@45099dd3]" started-at="2024-01-18T08:51:02 IST" name="productImagecountTest" data-provider="getProductImagesTestData" finished-at="2024-01-18T08:51:06 IST" duration-ms="3843" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Apple]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Apple Cinema 30"]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[6]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- productImagecountTest -->
-        <test-method signature="productInfoTest()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@45099dd3]" started-at="2024-01-18T08:51:06 IST" name="productInfoTest" finished-at="2024-01-18T08:51:10 IST" duration-ms="4057" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- productInfoTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@45099dd3]" started-at="2024-01-18T08:51:10 IST" name="tearDown" finished-at="2024-01-18T08:51:10 IST" duration-ms="406" status="PASS">
+        </test-method> <!-- userRegTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.RegistrationPageTest@3e27aa33]" started-at="2024-01-19T17:09:44 IST" name="tearDown" finished-at="2024-01-19T17:09:44 IST" duration-ms="354" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.opencart.tests.ProductInfoPageTest -->
+      </class> <!-- com.qa.opencart.tests.RegistrationPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

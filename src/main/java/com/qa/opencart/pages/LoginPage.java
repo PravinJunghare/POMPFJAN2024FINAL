@@ -24,6 +24,7 @@ public class LoginPage {
 	private By password = By.id("input-password");
 	private By loginBtn = By.xpath("//input[@value='Login']");
 	private By forgottenPwdlink = By.id("input-email");
+	private By registerlink = By.linkText("Register");
 
 	// 4 Page Actions
 
@@ -63,5 +64,9 @@ public class LoginPage {
 		eleUtil.doClick(loginBtn);
 		return new AccountsPage(driver);
 	}
-
+  public RegistrationPage navigateToRegistarionPage()
+  {
+	  eleUtil.doClick(registerlink);
+	  return new RegistrationPage(driver);
+  }
 }
