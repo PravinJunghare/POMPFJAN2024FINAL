@@ -8,6 +8,8 @@
 	<listeners>
 		<listener
 			class-name="com.qa.opencart.listeners.ExtentReportListener" />	
+			<listener
+			class-name="com.qa.opencart.listeners.AnnotationTransformer" />
 	</listeners>
 
 	<test name="Login Page Test">
@@ -21,6 +23,7 @@
 			<class name="com.qa.opencart.tests.AccountsPageTest" />
 		</classes>
 	</test>
+	
 	
 	<test name="ProdcutInfo Page Test">
 		<classes>

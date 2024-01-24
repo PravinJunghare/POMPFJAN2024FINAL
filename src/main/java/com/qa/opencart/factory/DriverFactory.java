@@ -90,7 +90,70 @@ public class DriverFactory {
 	 * 
 	 * @return
 	 */
+	// environment specific config.file
+	
+	public Properties initProp() {
 
+		// mvn clean install -Denv="qa"
+		// mvn clean install
+		prop = new Properties();
+		FileInputStream ip = null;
+		String envName = System.getProperty("env");
+		System.out.println("Running test cases on Env: " + envName);
+
+		try {
+			if (envName == null) {
+				System.out.println("no env is passed....Running tests on QA env...");
+				ip = new FileInputStream("./src/test/resources/config/qa.config.properties");
+			} else {
+				switch (envName.toLowerCase().trim()) {
+				case "qa":
+					ip = new FileInputStream("./src/test/resources/config/qa.config.properties");
+					break;
+				case "stage":
+					ip = new FileInputStream("./src/test/resources/config/stage.config.properties");
+					break;
+				case "dev":
+					ip = new FileInputStream("./src/test/resources/config/dev.config.properties");
+					break;
+				case "prod":
+					ip = new FileInputStream("./src/test/resources/config/config.properties");
+					break;
+
+				default:
+					System.out.println("....Wrong env is passed....No need to run the test cases....");
+				// break;
+				}
+
+			}
+		} catch (FileNotFoundException e) {
+
+		}
+
+		try {
+			prop.load(ip);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return prop;
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*
 	public Properties initProp() {
 		prop = new Properties();
 		try {
@@ -105,7 +168,7 @@ public class DriverFactory {
 		}
 
 		return prop;
-	}
+	}*/
 	
 	/**
 	 * take screenshot
