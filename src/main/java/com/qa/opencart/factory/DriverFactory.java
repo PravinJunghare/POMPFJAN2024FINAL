@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -76,9 +76,9 @@ public class DriverFactory {
 
 	}
 
-/*
- * This method will retun local copy of driver
- */
+	/*
+	 * This method will retun local copy of driver
+	 */
 
 	public synchronized static WebDriver getDriver() {
 		return tlDriver.get();
@@ -91,7 +91,7 @@ public class DriverFactory {
 	 * @return
 	 */
 	// environment specific config.file
-	
+
 	public Properties initProp() {
 
 		// mvn clean install -Denv="qa"
@@ -122,7 +122,7 @@ public class DriverFactory {
 
 				default:
 					System.out.println("....Wrong env is passed....No need to run the test cases....");
-				// break;
+					// break;
 				}
 
 			}
@@ -139,37 +139,18 @@ public class DriverFactory {
 		return prop;
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-/*
-	public Properties initProp() {
-		prop = new Properties();
-		try {
-			FileInputStream ip = new FileInputStream("./src/test/resources/config/config.properties");
-			prop.load(ip);
-		} catch (FileNotFoundException e) {
+	/*
+	 * public Properties initProp() { prop = new Properties(); try { FileInputStream
+	 * ip = new FileInputStream("./src/test/resources/config/config.properties");
+	 * prop.load(ip); } catch (FileNotFoundException e) {
+	 * 
+	 * e.printStackTrace(); } catch (IOException e) {
+	 * 
+	 * e.printStackTrace(); }
+	 * 
+	 * return prop; }
+	 */
 
-			e.printStackTrace();
-		} catch (IOException e) {
-
-			e.printStackTrace();
-		}
-
-		return prop;
-	}*/
-	
 	/**
 	 * take screenshot
 	 */
@@ -178,11 +159,11 @@ public class DriverFactory {
 		String path = System.getProperty("user.dir") + "/screenshot/" + System.currentTimeMillis() + ".png";
 		File destination = new File(path);
 		try {
-			org.openqa.selenium.io.FileHandler.copy(srcFile, destination);
+			FileUtils.copyFile(srcFile, destination);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return path;
 	}
-	
+
 }
