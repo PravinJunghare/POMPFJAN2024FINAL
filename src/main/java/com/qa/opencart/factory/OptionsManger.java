@@ -23,7 +23,7 @@ public class OptionsManger {
 		 * this will check the value in form of string then gives restult in form of
 		 * boolean
 		 */
-		co.addArguments("--remote--allow--origins=*");
+		co.addArguments("--remote-allow-origins=*");
 		if (Boolean.parseBoolean(prop.getProperty("headless").trim()))
 		{
 			System.out.println("=======Running chrome headless=====");
