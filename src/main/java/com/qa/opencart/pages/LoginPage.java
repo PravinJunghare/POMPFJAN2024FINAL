@@ -1,10 +1,13 @@
 package com.qa.opencart.pages;
 
+import org.checkerframework.common.value.qual.StaticallyExecutable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.qa.opencart.constants.AppConstant;
 import com.qa.opencart.utils.ElementUtil;
+
+import io.qameta.allure.Step;
 
 public class LoginPage {
 
@@ -27,7 +30,7 @@ public class LoginPage {
 	private By registerlink = By.linkText("Register");
 
 	// 4 Page Actions
-
+	@Step("Getting LoginPage Title......")
 	public String getLoginPageTitle() {
 		// String title = driver.getTitle();
 		// String title = eleUtil.waitForTitleIsAndFetch(10, "Account Login");
@@ -38,6 +41,7 @@ public class LoginPage {
 		return title;
 	}
 
+	@Step("Getting LoginPage URL......")
 	public String getLoginUrl() {
 		// String url = driver.getCurrentUrl();
 		String url = eleUtil.waitForURLContainsAndFetch(AppConstant.DEFAULT_MEDIUM_TIMEOUT,
@@ -46,27 +50,31 @@ public class LoginPage {
 		return url;
 	}
 
+	@Step("Checking forgotpwd link......")
 	// ******Encapuslation private variable and public method******* //
 	public boolean isForgotpwdLinkExits() {
 		// return driver.findElement(forgottenPwdlink).isDisplayed();
 		return eleUtil.waitForElementVisible(forgottenPwdlink, AppConstant.DEFAULT_MEDIUM_TIMEOUT).isDisplayed();
 	}
 
+	@Step("Login to app using username:{0} and password:{1}")
 	public AccountsPage doLogin(String un, String pwd) {
 		/*
 		 * driver.findElement(emailId).sendKeys(un);
 		 * driver.findElement(password).sendKeys(pwd);
 		 * driver.findElement(loginBtn).click();
 		 */
-        System.out.println("User credentilas are :" +un +":"+ pwd);
+		System.out.println("User credentilas are :" + un + ":" + pwd);
 		eleUtil.waitForElementVisible(emailId, AppConstant.DEFAULT_MEDIUM_TIMEOUT).sendKeys(un);
 		eleUtil.doSendKeys(password, pwd);
 		eleUtil.doClick(loginBtn);
 		return new AccountsPage(driver);
 	}
-  public RegistrationPage navigateToRegistarionPage()
-  {
-	  eleUtil.doClick(registerlink);
-	  return new RegistrationPage(driver);
-  }
+
+	@Step("Navigating to Registration Page")
+
+	public RegistrationPage navigateToRegistarionPage() {
+		eleUtil.doClick(registerlink);
+		return new RegistrationPage(driver);
+	}
 }

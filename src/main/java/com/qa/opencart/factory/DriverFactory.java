@@ -14,6 +14,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import com.qa.opencart.exception.FrameworkException;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
@@ -122,6 +124,7 @@ public class DriverFactory {
 
 				default:
 					System.out.println("....Wrong env is passed....No need to run the test cases....");
+					throw new FrameworkException("WRONG ENV IS PASSED");
 					// break;
 				}
 
