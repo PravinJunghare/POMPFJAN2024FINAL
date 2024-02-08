@@ -15,7 +15,7 @@ public class AccountsPageTest extends BaseTest {
 
 	@BeforeClass
 
-	public void accPageTest() {
+	public void accPageSetup() {
 		// accountsPage = loginPage.doLogin("pravinjunghare01@yahoo.com", "Test@1234");
 		accountsPage = loginPage.doLogin(prop.getProperty("username").trim(), prop.getProperty("password").trim());
 	}
