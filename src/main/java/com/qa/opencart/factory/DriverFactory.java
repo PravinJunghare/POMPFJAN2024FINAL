@@ -122,7 +122,7 @@ public class DriverFactory {
 					ip = new FileInputStream("./src/test/resources/config/config.properties");
 					break;
 
-				default:
+				default: 
 					System.out.println("....Wrong env is passed....No need to run the test cases....");
 					throw new FrameworkException("WRONG ENV IS PASSED");
 					// break;
