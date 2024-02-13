@@ -1,51 +1,7 @@
-pipeline 
-{
-    agent any
-    
-    tools{
-    	maven 'maven'
-        }
-
- 
         
-        
-        stage("Deploy to QA"){
+        stage("Publish Extent Report"){
             steps{
-                echo("deploy to qa")
-            }
-        }
-        
-        
-                
-        stage('Regression Automation Test') {
-            steps {
-                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    git 'https://github.com/PravinJunghare/POMPFJAN2024FINAL.git'
-                    bat "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_regression.xml"
-                    
-                }
-            }
-        }
-                
-     
-        stage('Publi Allure Reports') {
-           steps {
-                script {
-                    allure([
-                        includeProperties: false,
-                        jdk: '',
-                        properties: [],
-                        reportBuildPolicy: 'ALWAYS',
-                        results: [[path: '/allure-results']]
-                    ])
-                }
-            }
-        }
-        
-        
-        stage('Publish Extent Report'){
-            steps{
-                     publiHTML([allowMissing: false,
+                     publishHTML([allowMissing: false,
                                   alwaysLinkToLastBuild: false, 
                                   keepAll: true, 
                                   reportDir: 'reports', 
@@ -61,11 +17,11 @@ pipeline
             }
         }
         
-        stage('Sanity Automation Test') {
+        stage("Sanity Automation Test") {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/PravinJunghare/POMPFJAN2024FINAL.git'
-                    bat "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_sanity.xml"
+                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_sanity.xml"
                     
                 }
             }
@@ -73,9 +29,9 @@ pipeline
         
         
         
-        stage('Publi sanity Extent Report'){
+        stage("Publish sanity Extent Report"){
             steps{
-                     publiHTML([allowMissing: false,
+                     publishHTML([allowMissing: false,
                                   alwaysLinkToLastBuild: false, 
                                   keepAll: true, 
                                   reportDir: 'reports', 
@@ -87,4 +43,3 @@ pipeline
         
         
     }
-
